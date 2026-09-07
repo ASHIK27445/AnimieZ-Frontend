@@ -1,62 +1,46 @@
-# React + TypeScript + Vite
+# AnimieZ
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+## Overview
 
-Currently, two official plugins are available:
+AnimieZ is a modern anime-inspired streetwear storefront with cinematic scroll animations, product drops, responsive navigation, and a fashion-focused editorial design.
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+The website includes animated hero sections, real T-shirt product cards, a latest drops carousel, responsive menus, announcement marquee, and a branded footer.
 
-## React Compiler
+## Technology Stack
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+<p>
+  <img src="https://img.shields.io/badge/React-19-61DAFB?style=for-the-badge&logo=react&logoColor=white" alt="React" />
+  <img src="https://img.shields.io/badge/TypeScript-6-3178C6?style=for-the-badge&logo=typescript&logoColor=white" alt="TypeScript" />
+  <img src="https://img.shields.io/badge/Vite-8-646CFF?style=for-the-badge&logo=vite&logoColor=white" alt="Vite" />
+  <img src="https://img.shields.io/badge/Tailwind_CSS-4-06B6D4?style=for-the-badge&logo=tailwindcss&logoColor=white" alt="Tailwind CSS" />
+  <img src="https://img.shields.io/badge/Framer_Motion-13-EF008F?style=for-the-badge" alt="Framer Motion" />
+  <img src="https://img.shields.io/badge/GSAP-3-88CE02?style=for-the-badge&logo=greensock&logoColor=white" alt="GSAP" />
+</p>
 
-## Expanding the ESLint configuration
+## Features
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+- Scroll-driven fashion hero animations
+- AnimieZ T-shirt product collections
+- Latest drops carousel with next-product navigation
+- Responsive navbar with summer offer marquee
+- Cart, favourite, user, dropdown, and mobile menu icons
+- Animated product stack powered by Framer Motion
+- Responsive footer with story, contact, policy, FAQ, and social links
 
-```js
-export default defineConfig([
-  # AnimieZ
+## Local Setup
 
-  AnimieZ is a modern anime-inspired streetwear storefront built with React, TypeScript, Vite, and Tailwind CSS.
+```bash
+npm install
+npm run dev
+```
 
-  ## Live Website
+## Production Build
 
-  [https://animie-z.vercel.app/](https://animie-z.vercel.app/)
+```bash
+npm run build
+npm run preview
+```
 
-  ## Features
+## Live URL
 
-  - Scroll-driven fashion hero sections
-  - AnimieZ product and collection cards
-  - Latest drops carousel with product navigation
-  - Responsive navbar with announcement marquee
-  - Cart, favourite, user, dropdown, and mobile menu icons
-  - Animated product card stack using Framer Motion
-  - Responsive dark editorial design with product imagery
-  - Footer with story, contact, policy, FAQ, and social links
-
-  ## Tech Stack
-
-  - React 19
-  - TypeScript
-  - Vite
-  - Tailwind CSS
-  - Framer Motion
-  - GSAP
-  - Lucide React
-
-  ## Getting Started
-
-  ```bash
-  npm install
-  npm run dev
-  ```
-
-  ## Production Build
-
-  ```bash
-  npm run build
-  npm run preview
-  ```
-      // Enable lint rules for React DOM
+[https://animie-z.vercel.app/](https://animie-z.vercel.app/)
