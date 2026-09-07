@@ -1,11 +1,12 @@
 import { useEffect, useState } from "react";
-import { Heart, ShoppingCart, UserRound, ChevronDown } from "lucide-react";
+import { Heart, ShoppingCart, UserRound, ChevronDown, X } from "lucide-react";
 
 export default function AnimieZNavbar() {
   const [isTop, setIsTop] = useState(true);
   const [isScrolling, setIsScrolling] = useState(false);
   const [menuOpen, setMenuOpen] = useState(false);
   const [moreOpen, setMoreOpen] = useState(false);
+  const [marqueeOpen, setMarqueeOpen] = useState(true);
 
   useEffect(() => {
     let hideTimer: ReturnType<typeof setTimeout>;
@@ -27,16 +28,24 @@ export default function AnimieZNavbar() {
 
   return (
     <>
-      <div className="fixed inset-x-0 top-0 z-110 h-8 overflow-hidden bg-[#0b0b0b] text-white" aria-label="Summer offer">
-        <div className="animiez-marquee flex h-full w-max items-center gap-12 whitespace-nowrap px-4 text-[9px] font-black tracking-[0.22em]">
+      {marqueeOpen && <div className="fixed inset-x-0 top-0 z-110 h-8 overflow-hidden bg-[#0b0b0b] text-white" aria-label="Summer offer">
+        <div className="animiez-marquee flex h-full w-max items-center gap-12 whitespace-nowrap px-4 pr-14 text-[9px] font-black tracking-[0.22em]">
           <span>25% OFF ON THIS SUMMER DROP</span>
           <span>FREE SHIPPING ON ORDERS OVER $100</span>
           <span>25% OFF ON THIS SUMMER DROP</span>
           <span>FREE SHIPPING ON ORDERS OVER $100</span>
         </div>
-      </div>
+        <button
+          type="button"
+          aria-label="Close summer offer"
+          onClick={() => setMarqueeOpen(false)}
+          className="absolute right-3 top-1/2 flex h-6 w-6 -translate-y-1/2 items-center justify-center bg-white text-[#0b0b0b] transition-colors hover:bg-[#d9ff3f]"
+        >
+          <X className="h-3.5 w-3.5" />
+        </button>
+      </div>}
       <nav
-        className={`fixed inset-x-0 top-8 z-100 transition-all duration-300 ${
+        className={`fixed inset-x-0 ${marqueeOpen ? "top-8" : "top-0"} z-100 transition-all duration-300 ${
           isScrolling ? "-translate-y-full" : "translate-y-0"
         } ${isTop ? "bg-transparent" : "bg-[#0b0b0b]/95 shadow-lg backdrop-blur-md"}`}
         aria-label="Main navigation"

@@ -17,59 +17,46 @@ If you are developing a production application, we recommend updating the config
 
 ```js
 export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+  # AnimieZ
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+  AnimieZ is a modern anime-inspired streetwear storefront built with React, TypeScript, Vite, and Tailwind CSS.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
+  ## Live Website
 
-```
+  [https://animie-z.vercel.app/](https://animie-z.vercel.app/)
 
-You can also install [eslint-plugin-react-x](https://npmx.dev/package/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://npmx.dev/package/eslint-plugin-react-dom) for React-specific lint rules:
+  ## Features
 
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
+  - Scroll-driven fashion hero sections
+  - AnimieZ product and collection cards
+  - Latest drops carousel with product navigation
+  - Responsive navbar with announcement marquee
+  - Cart, favourite, user, dropdown, and mobile menu icons
+  - Animated product card stack using Framer Motion
+  - Responsive dark editorial design with product imagery
+  - Footer with story, contact, policy, FAQ, and social links
 
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
+  ## Tech Stack
+
+  - React 19
+  - TypeScript
+  - Vite
+  - Tailwind CSS
+  - Framer Motion
+  - GSAP
+  - Lucide React
+
+  ## Getting Started
+
+  ```bash
+  npm install
+  npm run dev
+  ```
+
+  ## Production Build
+
+  ```bash
+  npm run build
+  npm run preview
+  ```
       // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-
-```
